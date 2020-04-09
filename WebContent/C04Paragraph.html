@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04Paragraph.html</title>
+</head>
+<body>
+    <!--
+        수평방향에서의 정렬
+            블럭엘리먼트 : 컨텐츠의 양에 상관없이 하나의 블럭을 차지하므로
+                우측에 공간이 충분하여 컨텐츠는 우측정렬된다.
+            인라인엘리먼트 : 컨텐츠의 크기만큼만 영역을 차지하므로 컨텐츠가 
+                움직일 공간이 없어 정렬되지 않는다.만약 정렬해야 한다면 부모엘리먼트에서
+                text-aling을 설정한다.
+    -->
+    <h2>문단관련 CSS속성들</h2>
+
+    <div style="border: 1px blue dotted; width: 400px;"><!-- text-align:right; -->
+        <h2>컨텐츠 수평방향 정렬</h2>
+        <div style="border: 1px solid red; text-align:right;">
+            블럭엘리먼트
+        </div>
+        <span style="border: 1px solid blue; text-align:right;">
+            인라인엘리먼트
+        </span>
+    </div>
+
+    <!--
+    line-height : 줄간격, 즉 라인사이의 간격을 띄우는데
+        블럭와 인라인은 조금 다르게 적용된다.
+        Block : 컨텐츠의 영역을 세로영역이 늘어나서 마치 줄간격이
+            생긴것 같은 효과가 나타난다.
+        Inline : 컨텐츠의 영역은 크기의 변화가 없지만, 지정된
+            사이즈만큼 줄간격이 생겨 사이가 벌어진다.
+    -->
+    <h3>줄사이의 간격</h3>
+    <h4 style="line-height: 5em; border: 1px solid blue;">
+        블럭엘리먼트1에 줄간격 적용
+    </h4>
+    <h4 style="border: 1px solid black;">블럭 엘리먼트2></h4>
+    <h4 style="border: 1px solid black;">블럭 엘리먼트3></h4>
+
+    <div class="inline">
+        <span style="line-height: 5em; border:1px solid black;">
+            인라인엘리먼트1
+        </span><br>
+        <span style="border:1px solid black;">인라인엘리먼트2</span>
+        <br>
+        <span style="border: 1px solid black;">인라인엘리먼트3</span>
+    </div>
+    <h3>수직상태에서의 가운데 정렬</h3>
+
+    <!--
+        div박스의 height와 line-height의 값을 동일하게 지정하면
+        세로상태에서 가운데정렬이 된다.
+    -->
+    <h4>블럭엘리먼트 사용시 방법1</h4>
+    <div style="border: 1px solid black; height: 200px; width:200px;
+        line-height: 200px;">
+
+    </div>
+    <!--
+        div박스 내부의 padding을 줘서 텍스트를 아래로 밀어준다.
+        이경우 박스의 세로영역이 늘어나므로 사이즈는 별로도 조절해줘야 한다.
+
+    -->
+    <h4>블럭엘리먼트 사용시 방법2</h4>
+    <div style="border: 1px solid red; height: 100px; width:200px;
+        padding-top: 100px;">
+        나는 텍스트2
+
+    </div>
+
+    <!--
+        인라인 엘리먼트에서 세로상태의 가운데 정렬을 위해서는
+        vertical-align을 사용한다.
+    -->
+    <h4>인라인엘리먼트 사용시</h4>
+    <table border="1" width="300">
+        <tr>
+            <td style="height: 100px; vertical-align: top">
+                인라인엘리먼트 세로정렬
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 100px; vertical-align: middle">
+                인라인엘리먼트 세로정렬
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 100px; vertical-align: bottom">
+                인라인엘리먼트 세로정렬
+            </td>
+        </tr>
+    </table>
+
+    <h2>배분정렬</h2>
+    <p style="border: 1px solid bule; text-align:justify ">
+        포털에서 복사한 기사를 입력해주세요
+    </p>
+
+    
+        존경하는 국민 여러분, 코로나19 비상경제 시국을 타개하기 위한 대통령 주재 네 번째 비상경제회의를 오늘 오전에 마쳤습니다.
+        <br><br>
+        정부는 코로나19 사태 발생 이후 초기 긴급 방역을 시작으로 32조 원 규모의 실물 피해 대책, 100조 원 플러스알파 규모의 금융안정대책에 이어 18조 원 수준의 긴급재난지원 및 국민 부담 경감대책을 단계적으로 마련하여 대응 중에 있습니다.
+        <br><br>
+        그러나 자영업자, 소상공인, 기업과 국민들이 지금 당장 몇 개월간의 고비계곡을 잘 견뎌내고 다시 일어서는 데 지금까지의 지원이 충분치는 않기에 정부는 추가대책을 마련 중이고 앞으로도 계속 강구해 나갈 계획입니다.
+        <br><br>
+        오늘 4차 비상경제회의에서는 선결제, 선구매 등을 통한 내수 보완방안 그리고 수출 활력 제고방안과 스타트업, 벤처기업 지원 방안에 대해 논의 확정하였으며 그 결과를 차례로 말씀드리겠습니다.
+        <br><br>
+        먼저 제가 선결제, 선구매 등을 통한 내수 보완방안을 설명드리겠습니다.
+        <br><br>
+
+        <!--
+            text-Indent :문단에서 들여쓰기할떄 사용한다.
+                Block : 첫번째줄의 문장이 지정한만큼 들여쓰기 된다.
+                Inline : 컨텐츠의 영역의 잔여공간이 없으므로 들여쓰기 되지않는다.
+                이떄 부모엘리먼트에서 padding을통해 밀어줘야 한다.
+        -->
+    <h2>들여쓰기</h2>
+    <div style="border: 1px solid red; text-indent: 1em;">
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    </div>
+    <div style="borderL1px solid blue; padding-left:10px">
+        <span style="text-indent:1em;">
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        </span>
+    
+    </div>
+</body>
+
+</html>
