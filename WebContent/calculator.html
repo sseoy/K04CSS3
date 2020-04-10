@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            font-family:courier;
+            font-weight: bold;
+            border-radius: 10px 10px 10px 10px;
+        }
         div table {
             width: 400px;
             height: 350px;
             background-color: #dddddd;  
             padding: 3px;
+            margin:0 auto;
             
-                   
         }
-        div table, tr, td, th{
-            border-radius: 10px 10px 10px 10px;
+        div td, th{
             font-size: 28px;
             text-align: center;
             color: white;
-           
+            width: 25%;
         }
-        
         .result {
             background-color: #70c738;
             font-size: 35px; 
             text-align: right;
             color: black;
             padding-right: 10px;
-
         }
         .twocol{
             width: 50%;
@@ -35,11 +37,9 @@
         }
         .num{
             background-color: #373737;
-            width: 25%;
         }
         .sign{
             background-color: #fa960a;
-            width: 25%;
         }
         
         
@@ -47,11 +47,11 @@
     </style>
 </head>
 <body>
-    <h1><b>계산기</b></h1>
+    <h1 style="text-align: center;"><b>계산기</b></h1>
     <div>
         <table style="align-items: center;">
             <tr >
-                <td colspan="4" class="result"><b> 123+654 </b></td>
+                <td colspan="4" class="result"> 123+654</td>
                 
             </tr>
             <tr >
